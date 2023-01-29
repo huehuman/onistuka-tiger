@@ -132,7 +132,7 @@ $(document).ready(function () {
 
 // 멕시코 스와이퍼
   swiper_slide(".mexico66-banner", {
-    cssMode: true,
+    centeredSlides: true,
     spaceBetween: 10,
     slidesPerGroup: 1,
     loop: true,
@@ -151,10 +151,14 @@ $(document).ready(function () {
       clickable: true
     },
     
-    mousewheel: true,
     keyboard: true,
   })
 
+
+
+
+
+  
 
 
 
