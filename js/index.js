@@ -68,14 +68,17 @@ $(document).ready(function () {
   }
   )
 
-    
+  
+  function swiper_slide(id, option){
+    let swiper = new Swiper(id,option);
+  }
 
 
 
 
 
-  // 메인비주얼 스와이퍼
-  var swiper1 = new Swiper(".main-banner", {
+// 메인배너 스와이퍼
+  swiper_slide(".main-banner", {
     pagination: {
       el: ".main-pgb",
       type: "progressbar",
@@ -84,8 +87,100 @@ $(document).ready(function () {
       delay:3000
     },
     loop: true
+  })
+
+
+
+
+
+
+// 뉴,베스트 스와이퍼
+  swiper_slide(".banner", {
+    cssMode: true,
+    slidesPerView: 4,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    breakpoints:{
+      480: {slidesPerView: 2},
+      1024: {slidesPerView: 3},
+      1400: {slidesPerView: 4},
+    },
+    mousewheel: true,
+    keyboard: true,
+  })
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+// 멕시코 스와이퍼
+  swiper_slide(".mexico66-banner", {
+    cssMode: true,
+    spaceBetween: 10,
+    slidesPerGroup: 1,
+    loop: true,
+
+    breakpoints:{
+      480: {slidesPerView: 2},
+      1024: {slidesPerView: 3},
+      1400: {slidesPerView: 4},
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination ",
+      clickable: true
+    },
     
-  });
+    mousewheel: true,
+    keyboard: true,
+  })
+
+
+
+
+
+
+
+  swiper_slide(".insta-banner", {
+    slidesPerView: 5,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".instar-next",
+      prevEl: ".instar-prev",
+    },
+    breakpoints:{
+      480: {slidesPerView: 2},
+      641: {slidesPerView: 3},
+      1024: {slidesPerView: 4},
+      1400: {slidesPerView: 5},
+    }
+  })
 
 
 
@@ -104,6 +199,22 @@ $(document).ready(function () {
     $(".new-arrival .content-wrap .btn .btn-wrap li").removeClass("on").eq(i).addClass("on")
   });
 
+  $(".new-arrival .new-w").hide()
+  $(".new-arrival .content-wrap .btn .btn-wrap li").eq(1).click(function (e) { 
+    $(".new-arrival .new-bn").hide()
+    $(".new-arrival .new-w").show()
+
+  $(".new-arrival .content-wrap .btn .btn-wrap li").eq(0).click(function (e) { 
+    e.preventDefault();
+    $(".new-arrival .new-bn").hide()
+    $(".new-arrival .new-m").show()
+  });
+
+  });
+
+
+
+  
 
   $(".best .content-wrap .btn .btn-wrap li").eq(0).addClass("on")
   $(".best .content-wrap .btn .btn-wrap li a").eq(0).addClass("on")
@@ -119,28 +230,27 @@ $(document).ready(function () {
 
 
   // 뉴 어라이벌 /베스트 스와이퍼
-  var swiper2 = new Swiper(".banner", {
-    cssMode: true,
-    slidesPerView: 4,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    breakpoints:{
-      480: {slidesPerView: 2},
-      1024: {slidesPerView: 3},
-      1400: {slidesPerView: 4},
-    },
-    mousewheel: true,
-    keyboard: true,
-  });
+  // var swiper2 = new Swiper(".banner", {
+  //   cssMode: true,
+  //   slidesPerView: 4,
+  //   spaceBetween: 30,
+  //   slidesPerGroup: 1,
+  //   loop: true,
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  //   },
+  //   pagination: {
+  //     el: ".swiper-pagination",
+  //   },
+  //   breakpoints:{
+  //     480: {slidesPerView: 2},
+  //     1024: {slidesPerView: 3},
+  //     1400: {slidesPerView: 4},
+  //   },
+  //   mousewheel: true,
+  //   keyboard: true,
+  // });
   
 
 
@@ -154,29 +264,30 @@ $(document).ready(function () {
 
 
   // 멕시코66 스와이퍼
-  var swiper3 = new Swiper(".mexico66-banner", {
-    cssMode: true,
-    slidesPerView: 5,
-    spaceBetween: 10,
-    slidesPerGroup: 1,
-    loop: true,
-    breakpoints:{
-      480: {slidesPerView: 3},
-      1024: {slidesPerView: 3},
-      1400: {slidesPerView: 4},
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination ",
-      clickable: true
-    },
+  // var swiper3 = new Swiper(".swiper.mexico66-banner", {
+  //   cssMode: true,
+  //   slidesPerView: 5,
+  //   spaceBetween: 10,
+  //   slidesPerGroup: 1,
+  //   loop: true,
+  //   loopedSlides: 1,
+  //   breakpoints:{
+  //     480: {slidesPerView: 3},
+  //     1024: {slidesPerView: 3},
+  //     1400: {slidesPerView: 4},
+  //   },
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  //   },
+  //   pagination: {
+  //     el: ".swiper-pagination ",
+  //     clickable: true
+  //   },
     
-    mousewheel: true,
-    keyboard: true,
-  });
+  //   mousewheel: true,
+  //   keyboard: true,
+  // });
 
 
 
@@ -210,9 +321,11 @@ $(document).ready(function () {
 
   $(".header .icon .m-btn").click(function (e) { 
     e.preventDefault();
+    $(".header .m-menu-wrap .x-wrap").css("display","block")
     $(".header .m-menu").slideDown(function(){
       $("body,html").css("overflow","hidden")
     })
+
   });
   $(".header .m-menu-wrap .x-wrap img").click(function (e) { 
     e.preventDefault();
@@ -226,26 +339,51 @@ $(document).ready(function () {
 
   });
   
+  
 
 
-  var swiper4 = new Swiper(".insta-banner", {
-    slidesPerView: 5,
-    slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".instar-next",
-      prevEl: ".instar-prev",
-    },
-    breakpoints:{
-      480: {slidesPerView: 2},
-      641: {slidesPerView: 3},
-      1024: {slidesPerView: 4},
-      1400: {slidesPerView: 5},
-    }
-  });
+
+
+
+$(".insta-banner .insta-wrapper .insta-sw ul").hide()
+
+
+$(".insta-banner .insta-wrapper .insta-sw").mouseover(function () {
+  let i = $(this).attr("data-swiper-slide-index")
+  // 포트폴리오2에서=.attr("data-swiper-slide-index")사용했음.
+  // swiper의 인덱스를 가져오는것.
+  $(".insta-banner .insta-wrapper .insta-sw ul").hide()
+  $(this).find("ul").show()
+  // find : 자식을 선택하는 속성
+  $(this).find("a img").css("filter","brightness(60%)")
+  }
+);
+
+$(".insta-banner .insta-wrapper .insta-sw").mouseout(function () { 
+  $(".insta-banner .insta-wrapper .insta-sw ul").hide()
+  $(this).find("a img").css("filter","")
+});
+
+
+
+  // var swiper4 = new Swiper(".insta-banner", {
+  //   slidesPerView: 5,
+  //   slidesPerGroup: 1,
+  //   loop: true,
+  //   loopFillGroupWithBlank: true,
+  //   pagination: {
+  //     el: ".swiper-pagination",
+  //     clickable: true,
+  //   },
+  //   navigation: {
+  //     nextEl: ".instar-next",
+  //     prevEl: ".instar-prev",
+  //   },
+  //   breakpoints:{
+  //     480: {slidesPerView: 2},
+  //     641: {slidesPerView: 3},
+  //     1024: {slidesPerView: 4},
+  //     1400: {slidesPerView: 5},
+  //   }
+  // });
 });/* ready */

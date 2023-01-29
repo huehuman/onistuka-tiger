@@ -19,19 +19,15 @@ a{color: black; text-decoration: none;}
 .header{
     width: 100%;
     height: 78px;
-    position: relative;
     /* padding: 10px 0; */
     border-bottom: 1px solid #000;
+    z-index: 500;
+    background-color: white;
+    position: relative;
 }
-.header::after{
-    /* content: "";
-    width: 100%;
-    height: 1px;
-    background-color: #000;
-    position: absolute;
-    z-index: 9;
-    bottom: -0px; */
-}
+
+
+
 .header .header-wrap{
     max-width: 1600px;
     margin: 0 auto;
@@ -54,7 +50,7 @@ a{color: black; text-decoration: none;}
 }
 
 .header .nav{
-    width: 43%;
+    flex-basis: 43%;
     height: 100%;
 }
 .header .nav > ul{
@@ -70,22 +66,6 @@ a{color: black; text-decoration: none;}
     padding-top: 0;
 }
 
-.header .nav > ul > li::after{
-    /* content: "";
-    height: 3px;
-    background-color: #000;
-    position: absolute;
-    width: 0;
-    z-index: 10;
-    left: 50%;
-    bottom: 10px;
-    transform: translateX(-50%);
-    transition: 0.3s; */
-}
-
-.header .nav > ul > li:hover::after{
-    width: 30px;
-}
 .header .nav > ul  > li a{
     display: block;
     height: 100%;
@@ -106,39 +86,52 @@ a{color: black; text-decoration: none;}
     left: 0;
     z-index: 50;
     background-color: rgb(255, 255, 255);
+    
 }
 
 .header .submenu ul{
     display: flex;
-    
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    padding: 10px  0;
+    height: 70px;
+
 } 
 .header .submenu ul li{
-    padding: 15px 0px;
+
     margin-right: 30px;
+    height: 40px;
+    align-items: center;
+}
+.header .submenu ul li:hover a{
+    border-bottom: 1px solid #000;
+}
+.header .submenu ul li a{
+    display: block;
+    text-align: center;
+    line-height: 40px;
 }
 .header .submenu ul li:nth-child(1) a{
     font-weight: bold;
+
 }
 .header .icon{
-    width: 33%;
+    flex-basis: 33%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
 .header .icon .search{
-    width: 39%;
+    flex-basis: 39%;
     display: flex;
     margin-left: 107px;
     align-items: center;
 }
-.header .icon .search a img{
-    width: 32px;
-}
+
 .header .icon .search .m-btn{
     cursor: pointer;
     display: none;
+    margin: 1%;
 }
 
 .header .icon .search .m-btn .line{
@@ -155,6 +148,7 @@ a{color: black; text-decoration: none;}
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 .header .icon .search .search-wrap input{
     width: 133px;
@@ -170,7 +164,7 @@ a{color: black; text-decoration: none;}
 }
 
 .header .icon .icon-wrap{
-    width: 33%;
+    flex-basis: 33%;
     height: 100%;
 
 }
@@ -199,7 +193,6 @@ a{color: black; text-decoration: none;}
     position: fixed;
     top: 117px;
     left: 0;
-
     width: 100%;
     z-index: 200 ;
     height: 443px;
@@ -210,20 +203,22 @@ a{color: black; text-decoration: none;}
     width: 100%;
     display: flex;
     position: relative;
-    padding: 30px 10px;
+    padding: 2% 5%
 }
 
 
 
 .header .m-menu-wrap .x-wrap{
     position: absolute;
-    top: 15px;
+    top: 8px;
     left: 0;
+    margin: 0.5%;
+    display: none;
 }
 .header .m-menu-wrap .x-wrap img{
     
     width: 30px;
-    
+
     /* display: none; */
     cursor: pointer;
 }
@@ -237,6 +232,7 @@ a{color: black; text-decoration: none;}
     position: absolute;
     top: -70px;
     left: 200px;
+    display: none;
 }
 
 
@@ -265,7 +261,7 @@ a{color: black; text-decoration: none;}
 }
 .header .m-menu .m-menu-wrap2{
     display: flex;
-    width: 80%;
+    flex-basis: 80%;
     justify-content: space-between;
     margin: 0 auto;
 }
@@ -283,7 +279,7 @@ a{color: black; text-decoration: none;}
     width: 100%;
 }
 .main-banner{
-    max-width: 1600px
+    max-width: 1600px;
 }
 
 .main-banner img{
@@ -323,6 +319,7 @@ a{color: black; text-decoration: none;}
 .nb > .content-wrap > span{
     font-size: 50px;
     font-weight: 800;
+    background-color: white;
 }
 
 .nb .content-wrap .btn{
@@ -338,7 +335,9 @@ a{color: black; text-decoration: none;}
 
 .nb .content-wrap .btn .btn-wrap li{
     border-radius: 20px;
-    padding: 0 20px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
 }
 .nb .content-wrap .btn .btn-wrap li a{
     font-size: 20px;
@@ -353,7 +352,7 @@ a{color: black; text-decoration: none;}
 }
 
 .nb .banner{
-    height: 300px;
+    height: 400px;
     margin-top: 100px;
 }
 
@@ -361,7 +360,11 @@ a{color: black; text-decoration: none;}
     position: relative;
 }
 .nb .banner img{
-    width: 57%;
+    flex-basis: 57%;
+}
+.nb .banner .swiper-slide p:nth-child(2){
+    font-weight: bold;
+    font-size: 14px;
 }
 .nb .banner .nb-pn{
     top: 37%;
@@ -375,7 +378,7 @@ a{color: black; text-decoration: none;}
 
 
 
-/* 스와이퍼 공통 */
+/* 스와이퍼 인디케이터 컬러 */
 .swiper-button-prev,
 .swiper-button-next{
     --swiper-theme-color: #000000;
@@ -398,12 +401,12 @@ a{color: black; text-decoration: none;}
     max-width: 100%;
     height: 70px;
     line-height: 70px;
-    background-color: #000;
     overflow: hidden;
     margin-top: 110px;
 }
 .hot-keyword .keyword{
-    width: 660%;
+    width: 400%;
+background-color: #000;
     display: flex;
     text-align: center;
     animation: keyword 17s infinite linear;
@@ -417,7 +420,7 @@ a{color: black; text-decoration: none;}
     color: #fff;
     font-size: 2em;
     font-style: italic;
-    flex-basis: 10%;
+    flex-basis: 4%;
 }
 
 .hot-keyword .keyword a{
@@ -428,10 +431,12 @@ a{color: black; text-decoration: none;}
 
 .hot-keyword ul{
     display: flex;
-    flex-basis: 50%;
-    justify-content: space-around;
+    flex-basis: 32%;
+    justify-content: space-between;
 }
-
+.hot-keyword ul li{
+    flex-basis: 16%;
+}
 @keyframes keyword {
     100%{transform: translateX(-60%);}
     
@@ -469,14 +474,6 @@ a{color: black; text-decoration: none;}
     display: flex;
     width: 30%;
     align-items: center;
-}
-.mexico66 .mexico66-content::after{
-    content: "";
-    width: 100%;
-    height: -1px;
-    background-color: #000;
-    bottom: -1px;
-    display: none;
 }
 
 .mexico66 .mexico66-content .txt{
@@ -517,8 +514,16 @@ a{color: black; text-decoration: none;}
 .mexico66-swiper-wrapper .swiper-slide{
     height: 100%;
     width: 100px;
+    text-align: center;
     align-items: center;
     display: flex;
+}
+
+.mexico66 .mexico66-content .mexico-price{
+    text-align: center;
+}
+.mexico66 .item .mexico-price p:first-child{
+    font-weight: bold;
 }
 
 .swiper-button-next, .swiper-button-prev{
@@ -583,7 +588,7 @@ a{color: black; text-decoration: none;}
     justify-content: center;
 }
 .collection2 .c2-img{
-    width: 67%;
+    flex-basis: 67%;
     position: relative;
 }
 
@@ -606,7 +611,7 @@ a{color: black; text-decoration: none;}
 
 
 .collection2 .c2-txt{
-    width: 33%;
+    flex-basis: 33%;
     text-align: center;
     display: flex;
 }
@@ -717,15 +722,52 @@ a{color: black; text-decoration: none;}
 
 
 
+
+
+
+
+
+
+
+
+
 .insta-banner{
     max-width: 1600px;
     margin: 450px auto 0;
 }
 
 .insta-banner img{
-
     width: 310px;
+    transition: 0.3s;
 }
+.insta-banner img:hover{
+    filter: brightness(60%);  
+
+}
+
+
+/* .insta-banner img:hover ~ ul{
+    display: block;
+    
+} */
+.insta-banner .insta-sw{
+    position: relative;
+}
+.insta-banner .insta-sw ul{
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: 0.3s;
+    /* display: none; */
+    
+}
+
+
+
 .instar-next, .instar-prev{
     --swiper-theme-color:rgb(255, 255, 255);
     top: 50%;
@@ -733,6 +775,15 @@ a{color: black; text-decoration: none;}
 .swiper-button-next, .swiper-rtl .swiper-button-prev{
     right: 27px;
 }
+
+
+
+
+
+
+
+
+
 
 
 .footer{
@@ -758,7 +809,7 @@ a{color: black; text-decoration: none;}
     position: relative;
 }
 .footer .footer-wrap .logo{
-    margin: 0 55px;
+    margin-right:55px;
 
 }
 
@@ -775,6 +826,7 @@ a{color: black; text-decoration: none;}
 
 .footer .footer-wrap .ft-menu{
     display: flex;
+    margin-left: 30px;
 }
 .footer .footer-wrap .ft-menu .support{
     margin-right: 45px;
@@ -895,6 +947,20 @@ a{color: black; text-decoration: none;}
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width: 641px) and (max-width: 1200px){
     .header{
         height: 175px;
@@ -919,11 +985,11 @@ a{color: black; text-decoration: none;}
         display: none;
     }
     .header .icon{
-        width: 100%;
+        flex-basis: 100%;
     }
 
     .header .icon .search{
-        width: 50%;
+        flex-basis: 50%;
         margin: 0;
     }
     .header .icon .search a{
@@ -956,13 +1022,16 @@ a{color: black; text-decoration: none;}
         justify-content: end;
     }
     .header .icon .icon-wrap ul{
-        width: 17%;
+        flex-basis: 20%;
+    }
+    .header .icon .icon-wrap ul li{
+        margin: 3%;
     }
     .header .header-wrap .icon .like{
         display: none;
     }
 
-
+    
 
     .header .m-menu{
         width: 100%;
@@ -974,7 +1043,26 @@ a{color: black; text-decoration: none;}
         height: 600px;
 
     }
+    
 
+
+
+
+    .hot-keyword .keyword{
+        width: 500%;
+        animation: keyword 15s infinite linear;
+    }
+    .hot-keyword ul{
+        flex-basis: 166%;
+    }
+
+
+
+
+
+
+
+    
     .mexico66 .mexico66-content .txt > h3{
         font-size: 40px;
     }
@@ -985,9 +1073,8 @@ a{color: black; text-decoration: none;}
     .mexico66 .mexico-wrap .item .mexico66-banner{
         width: 100%;
     }
-    .mexico66 .mexico66-content .txt-wrap{
-        justify-content: center;
-    }
+
+    
     .swiper-button-next, .swiper-button-prev{
         top: 50%;
     }
@@ -1013,14 +1100,14 @@ a{color: black; text-decoration: none;}
     }
 
 
-    .insta-s{
+    .insta-sw{
         display: flex;
         justify-content: center;
     }
 
     .insta-banner img{
 
-        width: 227px;
+        width: 240px;
     }
 
     .swiper-button-prev{
@@ -1034,8 +1121,6 @@ a{color: black; text-decoration: none;}
     .t-footer{
         display: block;
     }
-
-
 
 
 }
@@ -1073,7 +1158,7 @@ a{color: black; text-decoration: none;}
     }
 
     .header .icon{
-        width: 100%;
+        flex-basis: 100%;
         position: relative;
     }
     .header .icon .search .m-btn{
@@ -1091,12 +1176,18 @@ a{color: black; text-decoration: none;}
         bottom: 86px;
         width: 17%;
     }
+    .header .icon .icon-wrap ul{
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+    }
     .header .header-wrap .icon .like{
         display: none;
     }
     
     .header .icon .search .m-btn{
         display: block;
+        margin: 0;
     }
     
 
@@ -1110,7 +1201,7 @@ a{color: black; text-decoration: none;}
 
     .header .m-menu{
         background-color: rgba(243, 243, 243, 0.959);
-        top:50px;
+        top:40px;
         height: 100%;
     }
     .header .m-menu-wrap{
@@ -1126,8 +1217,8 @@ a{color: black; text-decoration: none;}
         width: 33px;
     }
     .header .m-menu-wrap .x-wrap{
-        left: 70px;
-        top: -52px;
+        left: 67px;
+        top: -54px;
     }
 
 
@@ -1164,8 +1255,12 @@ a{color: black; text-decoration: none;}
         font-size: 30px;
     }
 
-
-
+    .main .main-banner .swiper-wrapper{
+        height: 700px;
+    }
+    .main .main-banner .swiper-wrapper .swiper-slide a img{
+        content:url(../img/m-mainbanner.png)
+    }
 
 
 
@@ -1245,7 +1340,8 @@ a{color: black; text-decoration: none;}
         max-width: 1600px;
         margin: 151px auto 0;
     }
-
+    
+    
 
 
 
@@ -1255,5 +1351,6 @@ a{color: black; text-decoration: none;}
     .m-footer{
         display: block;
     }
+    
     
 }
