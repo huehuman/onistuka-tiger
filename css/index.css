@@ -211,8 +211,8 @@ a{color: black; text-decoration: none;}
 
 .header .m-menu-wrap .x-wrap{
     position: absolute;
-    top: 8px;
-    left: 0;
+    top: 7px;
+    left: 19px;
     margin: 0.5%;
     display: none;
 }
@@ -453,12 +453,12 @@ background-color: #000;
 
 .mexico66{
     width: 100%;
-    padding: 0 20px;
 }
 .mexico66 .mexico-wrap{
     max-width: 1600px;
     margin: 0px auto;
     margin-top: 50px;
+    padding: 0 20px;
 }
 .mexico66 .mexico-wrap img{
     width: 100%;
@@ -585,7 +585,7 @@ background-color: #000;
     max-width: 1600px;
     margin: 0 auto;
     display: flex;
-}1200
+}
 
 .collection2 .collection2-wrap .c2-txt-content{
     justify-content: center;
@@ -826,11 +826,19 @@ background-color: #000;
 .footer .footer-wrap .ft-desc .padding{
     padding: 24px 0;
 }
-
+.footer .footer-wrap .ft-desc .small{
+    font-size: 12px;
+}
+.footer .footer-wrap .ft-desc .small2{
+    padding-top: 10px;
+}
 
 .footer .footer-wrap .ft-menu{
     display: flex;
     margin-left: 30px;
+}
+.footer .footer-wrap .ft-menu h4{
+    font-size: 20px;
 }
 .footer .footer-wrap .ft-menu .support{
     margin-right: 45px;
@@ -904,7 +912,7 @@ background-color: #000;
 .m-footer{
     margin-top: 135px;
     width: 100%;
-    padding: 44px 10px;
+    padding: 44px 0;
     position: relative;
     display: none;
 }
