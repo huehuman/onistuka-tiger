@@ -22,7 +22,7 @@ a{color: black; text-decoration: none;}
     /* padding: 10px 0; */
     border-bottom: 1px solid #000;
     z-index: 500;
-    background-color: white;
+
     position: relative;
 }
 
@@ -35,6 +35,7 @@ a{color: black; text-decoration: none;}
     justify-content: space-between;
     display: flex;
     align-items: center;
+    padding: 0 20px;
 }
 
 .header .logo a{
@@ -420,7 +421,7 @@ background-color: #000;
     color: #fff;
     font-size: 2em;
     font-style: italic;
-    flex-basis: 4%;
+    flex-basis: 5%;
 }
 
 .hot-keyword .keyword a{
@@ -431,14 +432,14 @@ background-color: #000;
 
 .hot-keyword ul{
     display: flex;
-    flex-basis: 32%;
+    flex-basis: 40%;
     justify-content: space-between;
 }
 .hot-keyword ul li{
-    flex-basis: 16%;
+    flex-basis: 17%;
 }
 @keyframes keyword {
-    100%{transform: translateX(-60%);}
+    100%{transform: translateX(-69%);}
     
 }
 
@@ -452,6 +453,7 @@ background-color: #000;
 
 .mexico66{
     width: 100%;
+    padding: 0 20px;
 }
 .mexico66 .mexico-wrap{
     max-width: 1600px;
@@ -484,13 +486,14 @@ background-color: #000;
     font-size: 70px;
     font-weight: 800;
     margin-bottom: 20px;
+    font-family: 'SBAggroB';
 }
 
 .mexico66 .mexico66-content .txt p{
     margin-top: 10px;
     font-weight: 500;
     line-height: 20px;
-    font-size: 25px;
+    font-size: 24px;
 }
 .mexico66 .mexico-wrap .item{
     display: flex;
@@ -582,7 +585,7 @@ background-color: #000;
     max-width: 1600px;
     margin: 0 auto;
     display: flex;
-}
+}1200
 
 .collection2 .collection2-wrap .c2-txt-content{
     justify-content: center;
@@ -628,17 +631,18 @@ background-color: #000;
 .collection2 .c2-txt .c-title{
     margin-top: 298px;
 
+
 }
 .collection2 .c2-txt .c-title h1{
     font-family: 'SBAggroB';
-    font-size: 83px;
+    font-size: 70px;
 }
 
 .collection2 .c2-txt .c-desc p{
-    font-size: 21px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 500;
     letter-spacing: -1px;
-    line-height: 25px;
+    line-height: 32px;
 }
 .collection2 .c2-txt .c-desc p:first-child{
     margin-top: 61px;
@@ -1048,13 +1052,6 @@ background-color: #000;
 
 
 
-    .hot-keyword .keyword{
-        width: 500%;
-        animation: keyword 15s infinite linear;
-    }
-    .hot-keyword ul{
-        flex-basis: 166%;
-    }
 
 
 
@@ -1067,8 +1064,8 @@ background-color: #000;
         font-size: 40px;
     }
     .mexico66 .mexico66-content .txt p{
-        font-size: 14px;
-        line-height: 7px;
+        font-size: 16px;
+        line-height: 11px;
     }
     .mexico66 .mexico-wrap .item .mexico66-banner{
         width: 100%;
@@ -1265,6 +1262,64 @@ background-color: #000;
 
 
 
+
+
+    .hot-keyword{
+    max-width: 100%;
+    height: 70px;
+    line-height: 70px;
+    overflow: hidden;
+    margin-top: 110px;
+}
+.hot-keyword .keyword{
+    width: 600%;
+    background-color: #000;
+    display: flex;
+    text-align: center;
+    animation: keyword 14s infinite linear;
+}
+.hot-keyword:hover .keyword{
+    animation-play-state: paused;
+}
+
+.hot-keyword span{
+    margin: 0 20px;
+    color: #fff;
+    font-size: 2em;
+    font-style: italic;
+    flex-basis: 10%;
+}
+
+.hot-keyword .keyword a{
+    color: #fff;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.hot-keyword ul{
+    display: flex;
+    flex-basis: 40%;
+    justify-content: space-between;
+}
+.hot-keyword ul li{
+    flex-basis: 30%;
+
+}
+@keyframes keyword {
+    100%{transform: translateX(-60%);}
+    
+}
+
+.mexico66 .mexico66-content .txt{
+    margin-top: 50px;
+}
+
+
+.collection1 img{
+    content:url(../img/m-aw2022.png)
+}
+
+
     .collection2{
         display: none
     }
@@ -1310,7 +1365,9 @@ background-color: #000;
 
 
 
-    
+    .mexico66 .mexico-wrap > img{
+        content:url(../img/m-mexico66.png)
+    }
 
     .mexico66 .mexico66-content .txt-wrap{
         width: 100%;
